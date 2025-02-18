@@ -1,0 +1,177 @@
+/* Custom styles for GadgetHub */
+body {
+  padding-top: 76px;
+}
+
+.hero-section {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.product-card,
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover,
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image,
+.category-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.filters-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.price-range {
+  width: 100%;
+}
+
+#contact-form input,
+#contact-form textarea {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.btn-primary {
+  padding: 0.5rem 1.5rem;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .hero-section .btn-group {
+    justify-content: center;
+  }
+}
+
+/* Default light mode */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.3s ease-in-out;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #333333 !important;
+}
+
+.dark-mode .btn-outline-secondary {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.price-range {
+  width: 100%;
+}
+.range-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.price-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-input {
+  position: relative;
+  height: 50px;
+}
+
+input[type="range"] {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+input[type="range"].max-range {
+  top: 25px;
+}
+/* Navbar Styling */
+.navbar {
+  padding: 10px 20px;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 10px;
+}
+
+/* Smooth transitions */
+#loginForm,
+#signupForm {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effects */
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
