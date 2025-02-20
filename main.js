@@ -43,7 +43,7 @@ function addToCart(product) {
 
 function removeFromCart(serialNo) {
   cart = cart.filter((item) => item.serialNo !== serialNo);
-  localStorage.setItem("cart");
+  localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
 }
 
