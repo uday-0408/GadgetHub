@@ -1,8 +1,12 @@
 /* Custom styles for GadgetHub */
+
+/* Global body styles: Adding top padding to avoid overlapping with a fixed navbar */
 body {
   padding-top: 76px;
 }
 
+/* HERO SECTION */
+/* Styles for the hero section: full viewport height, centered content, with a semi-transparent white overlay and background image */
 .hero-section {
   background: linear-gradient(
       rgba(255, 255, 255, 0.9),
@@ -16,45 +20,78 @@ body {
   align-items: center;
 }
 
+/* PRODUCT AND CATEGORY CARDS */
+/* Adding smooth transition and rounded corners for product and category cards */
 .product-card,
 .category-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
 }
 
+/* CARD IMAGE STYLING */
+/* Ensuring card images have fixed height, maintain aspect ratio, and a smooth zoom effect on hover */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 20px;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+/* Hover effects for cards: slight lift and shadow for visual depth */
 .product-card:hover,
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* IMAGE CLASSES FOR PRODUCTS AND CATEGORIES */
+/* Ensures product and category images have consistent sizing and object-fit behavior */
 .product-image,
 .category-image {
   height: 200px;
   object-fit: cover;
 }
 
+/* FILTERS SECTION STYLING */
+/* Styling for filters container with a light background, rounded corners, and padding */
 .filters-section {
   background-color: #f8f9fa;
   border-radius: 8px;
   padding: 1rem;
 }
 
+/* Sticky positioning for filter div to keep filters visible while scrolling */
+#filters-div {
+  position: sticky;
+  top: 100px;
+}
+
+/* Ensuring price range input takes full width */
 .price-range {
   width: 100%;
 }
 
+/* CONTACT FORM STYLING */
+/* Default styles for inputs and textarea in the contact form */
 #contact-form input,
 #contact-form textarea {
   border: 1px solid #dee2e6;
   border-radius: 4px;
 }
 
+/* Focus state for contact form fields: change border color and add subtle box shadow */
 #contact-form input:focus,
 #contact-form textarea:focus {
   border-color: #0d6efd;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
+/* NAVBAR STYLING */
+/* Styling for the navbar brand and links for better typography */
 .navbar-brand {
   font-size: 1.5rem;
 }
@@ -63,10 +100,14 @@ body {
   font-weight: 500;
 }
 
+/* PRIMARY BUTTON STYLING */
+/* Adjusting padding for primary buttons */
 .btn-primary {
   padding: 0.5rem 1.5rem;
 }
 
+/* FEATURE ICON STYLING */
+/* Circular icon style with centered content and a subtle background color */
 .feature-icon {
   width: 80px;
   height: 80px;
@@ -78,99 +119,123 @@ body {
   margin: 0 auto;
 }
 
+/* MEDIA QUERIES */
+/* Responsive adjustments for hero section on smaller screens */
 @media (max-width: 768px) {
   .hero-section {
     text-align: center;
     padding: 4rem 0;
   }
-
   .hero-section .btn-group {
     justify-content: center;
   }
 }
 
-/* Default light mode */
+/* THEME STYLES */
+/* Default light mode styling for the page */
 body {
   background-color: #ffffff;
   color: #000000;
   transition: 0.3s ease-in-out;
 }
 
-/* Dark mode styles */
+/* Dark mode styling overrides */
 .dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
 
+/* Dark mode adjustments for the navbar */
 .dark-mode .navbar {
   background-color: #333333 !important;
 }
 
+/* Dark mode button outline for secondary buttons */
 .dark-mode .btn-outline-secondary {
   border-color: #ffffff;
   color: #ffffff;
 }
 
+/* Ensure price range input remains full width */
 .price-range {
   width: 100%;
 }
+
+/* RANGE SLIDER CONTAINER */
+/* Container for range inputs with relative positioning for custom styling */
 .range-container {
   position: relative;
   width: 100%;
   max-width: 400px;
 }
+
+/* Range slider labels: space out labels and set a smaller font size */
 .range-labels {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
+
+/* Container for price input fields with vertical spacing */
 .price-input-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* Price input layout: aligning labels and inputs side by side */
 .price-input {
   display: flex;
   justify-content: space-between;
 }
 
+/* Each price field arranged vertically */
 .price-field {
   display: flex;
   flex-direction: column;
 }
 
+/* RANGE INPUT CONTAINER */
+/* Container for the range slider with defined height */
 .range-input {
   position: relative;
   height: 50px;
 }
 
+/* STYLE FOR RANGE INPUTS */
+/* Absolute positioning for range inputs to overlay them properly */
 input[type="range"] {
   position: absolute;
   width: 100%;
   top: 0;
 }
 
+/* Adjust positioning for the maximum range slider */
 input[type="range"].max-range {
   top: 25px;
 }
-/* Navbar Styling */
+
+/* NAVBAR CUSTOM STYLING */
+/* Additional padding for the navbar for improved spacing */
 .navbar {
   padding: 10px 20px;
 }
 
-/* Modal Styling */
+/* MODAL STYLING */
+/* Rounded corners for modal content */
 .modal-content {
   border-radius: 10px;
 }
 
-/* Smooth transitions */
+/* SMOOTH TRANSITIONS */
+/* Adding transition effects for login and signup forms for smoother appearance */
 #loginForm,
 #signupForm {
   transition: all 0.3s ease-in-out;
 }
 
-/* Button Hover Effects */
+/* BUTTON HOVER EFFECTS */
+/* Hover state for outline primary buttons: changes background color and text color */
 .btn-outline-primary:hover {
   background-color: #007bff;
   color: white;
